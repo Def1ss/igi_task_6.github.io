@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алексей Соколов | Архитектурный фотограф</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем шрифты Google Fonts для современного вида -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта с навигацией -->
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">
+                <a href="#">A. Sokolov</a>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">Обо мне</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Портфолио</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный экран (Hero Section) -->
+        <section class="hero">
+            <div class="container hero__container">
+                <h1 class="hero__title">Архитектурная фотография</h1>
+                <p class="hero__subtitle">Вижу линии. Ловлю свет. Создаю образ вашего объекта.</p>
+                <a href="#contact" class="btn btn--primary">Обсудить проект</a>
+            </div>
+        </section>
+
+        <!-- Секция "Обо мне" -->
+        <section id="about" class="about">
+            <div class="container about__container">
+                <div class="about__content">
+                    <h2 class="section-title">Обо мне</h2>
+                    <p class="about__text">Привет! Меня зовут Алексей Соколов. Я специализируюсь на архитектурной и интерьерной съемке. Моя задача — через объектив камеры передать не только геометрию и формы, но и настроение пространства, замысел архитектора и уникальность фактур.</p>
+                    <p class="about__text">Работаю с архитектурными бюро, девелоперами и дизайнерами интерьеров. Индивидуальный подход к каждому проекту и внимание к деталям — то, что отличает мою работу.</p>
+                </div>
+                <div class="about__image">
+                    <!-- Здесь будет серый квадрат как заглушка под фото -->
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Портфолио" (примеры работ) -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title section-title--centered">Избранные проекты</h2>
+                <div class="portfolio__grid">
+                    <div class="portfolio__item">
+                        <div class="portfolio__image image-placeholder"></div>
+                        <p class="portfolio__caption">Бизнес-центр "Neva Towers"</p>
+                    </div>
+                    <div class="portfolio__item">
+                        <div class="portfolio__image image-placeholder"></div>
+                        <p class="portfolio__caption">Жилой комплекс "Дом на набережной"</p>
+                    </div>
+                    <div class="portfolio__item">
+                        <div class="portfolio__image image-placeholder"></div>
+                        <p class="portfolio__caption">Частная резиденция в стиле минимализм</p>
+                    </div>
+                    <div class="portfolio__item">
+                        <div class="portfolio__image image-placeholder"></div>
+                        <p class="portfolio__caption">Музей современного искусства</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Контакты" -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title section-title--centered">Связаться со мной</h2>
+                <div class="contact__wrapper">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">Давайте создавать красивое вместе</h3>
+                        <p class="contact__text">Если вы ищете фотографа для вашего архитектурного проекта или вам нужны качественные снимки объекта, я буду рад обсудить детали.</p>
+                        <ul class="contact__list">
+                            <li class="contact__list-item">✉️ a.sokolov@email.com</li>
+                            <li class="contact__list-item">📞 +7 (999) 123-45-67</li>
+                            <li class="contact__list-item">📍 Москва / Готова к выездам по РФ</li>
+                        </ul>
+                    </div>
+                    <!-- Простая форма обратной связи (визуально) -->
+                    <form class="contact__form">
+                        <input type="text" class="contact__input" placeholder="Ваше имя" required>
+                        <input type="email" class="contact__input" placeholder="Email" required>
+                        <textarea class="contact__textarea" rows="4" placeholder="Краткое описание задачи..."></textarea>
+                        <button type="submit" class="btn btn--primary btn--full">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <p class="footer__copyright">© 2024 Алексей Соколов. Архитектурная фотография.</p>
+        </div>
+    </footer>
+</body>
+</html>
