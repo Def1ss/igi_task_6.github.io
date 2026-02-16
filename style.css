@@ -1,0 +1,318 @@
+/* style.css */
+
+/* Базовые сбросы и переменные */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #ffffff;
+    --color-text: #1e1e1e;
+    --color-text-light: #5a5a5a;
+    --color-accent: #a88b5f; /* Приглушенный золотой/песочный */
+    --color-accent-dark: #7c643f;
+    --color-placeholder-bg: #2e2e2e; /* Темный фон для заглушек */
+    --color-placeholder-text: #6b6b6b;
+    --border-radius: 8px;
+    --container-width: 1200px;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Типография */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.section-title--centered {
+    text-align: center;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border: none;
+    text-align: center;
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: var(--color-accent-dark);
+    transform: translateY(-2px);
+}
+
+.btn--full {
+    width: 100%;
+}
+
+/* Заглушки для изображений (так как мы не вставляем реальные фото) */
+.image-placeholder {
+    background-color: var(--color-placeholder-bg);
+    border-radius: var(--border-radius);
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-placeholder-text);
+    font-size: 0.9rem;
+    background-image: linear-gradient(45deg, #3a3a3a 25%, #444444 25%, #444444 50%, #3a3a3a 50%, #3a3a3a 75%, #444444 75%, #444444 100%);
+    background-size: 28.28px 28.28px; /* Легкий паттерн для имитации изображения */
+}
+
+/* Шапка */
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background-color: var(--color-bg);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.nav__list {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav__link:hover {
+    color: var(--color-accent);
+}
+
+/* Hero секция */
+.hero {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Секция Обо мне */
+.about {
+    padding: 80px 0;
+}
+
+.about__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about__text {
+    margin-bottom: 20px;
+    color: var(--color-text-light);
+}
+
+.about__image .image-placeholder {
+    min-height: 350px;
+}
+
+/* Портфолио */
+.portfolio {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolio__item {
+    text-align: center;
+}
+
+.portfolio__image {
+    min-height: 200px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio__item:hover .portfolio__image {
+    transform: scale(1.02);
+}
+
+.portfolio__caption {
+    font-weight: 500;
+    color: var(--color-text-light);
+}
+
+/* Контакты */
+.contact {
+    padding: 80px 0;
+}
+
+.contact__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+    background-color: #f3f3f3;
+    padding: 50px;
+    border-radius: var(--border-radius);
+}
+
+.contact__subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact__text {
+    margin-bottom: 30px;
+    color: var(--color-text-light);
+}
+
+.contact__list {
+    list-style: none;
+}
+
+.contact__list-item {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact__input,
+.contact__textarea {
+    padding: 15px 18px;
+    border: 1px solid #d1d1d1;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background-color: white;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+/* Футер */
+.footer {
+    padding: 30px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .about__container,
+    .contact__wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .nav__list {
+        gap: 20px;
+    }
+
+    .header__container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact__wrapper {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
